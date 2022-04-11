@@ -62,7 +62,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.username = "steve";
     this.password = "123456";
-    this.type = "admin";
+    this.type = "user";
   }
 
   onSubmit() {
