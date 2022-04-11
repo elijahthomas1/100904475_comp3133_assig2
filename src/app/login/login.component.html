@@ -1,0 +1,19 @@
+<h1>PLEASE LOGIN HERE</h1>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+    <p>
+        <label for="username">username</label>
+        <input type="text" id="username" name="username" formControlName="username" minlength="5" required/>
+        <span *ngIf="(loginForm.invalid) && (loginForm.dirty)">
+                Please enter a valid username, minimum 5 characters
+        </span>
+    </p>
+    <p>
+        <label for="password">password</label>
+        <input type="text" id="password" name="password" formControlName="password" minlength="5"  required />
+        <span *ngIf="(loginForm.invalid) && (loginForm.dirty)">
+            Please enter a valid password, minimum 5 characters
+        </span>
+    </p>
+    <button type="submit"> SUBMIT </button>
+</form>

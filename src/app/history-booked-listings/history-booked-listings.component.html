@@ -1,0 +1,15 @@
+<button (click)="goBack()">GO BACK</button>
+<h1> VIEW USERS BOOKED LISTINGS</h1>
+<ng-template ngIf="loading == false">
+    <ul>
+        <li *ngFor="let listing of bookingList">
+            <p>listing_id: {{listing.listing_id}}</p>
+            <p>booking_id: {{listing.booking_id}}</p>
+            <p>booking_date: {{listing.booking_date}}</p>
+            <p>booking_start: {{listing.booking_start}}</p>
+            <p>booking_end: {{listing.booking_end}}</p>
+            <p>username: {{listing.username}}</p>
+        </li>
+    </ul>
+</ng-template>
+<button (click)="goBack()">GO BACK</button>

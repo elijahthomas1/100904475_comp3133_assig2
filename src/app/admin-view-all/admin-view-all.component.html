@@ -1,0 +1,18 @@
+<h1>VIEW ADMIN LISTINGS</h1>
+<button (click)="goLogin()">Go back to login</button>
+<button (click)="addListing()">ADD A NEW LISTING</button>
+<ng-template ngIf="loading == false">
+    <ul>
+        <li *ngFor="let listing of listingList">
+            <h3>{{listing.listing_title}}</h3>
+            <p>Listing Id: {{listing.listing_id}}</p>
+            <p>Description: {{listing.description}}</p>
+            <p>Street: {{listing.street}}</p>
+            <p>City: {{listing.city}}</p>
+            <p>Postal Code: {{listing.postal_code}}</p>
+            <p>Price: {{listing.price}}</p>
+            <p>Email: {{listing.email}}</p>
+            <p>Username: {{listing.username}}</p>
+        </li>
+    </ul>
+</ng-template>

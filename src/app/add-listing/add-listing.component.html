@@ -1,0 +1,70 @@
+<h1>CREATE NEW LISTING</h1>
+<button (click)="goBack()">GO BACK</button>
+<ng-template ngIf="loading == false">
+    <form [formGroup]="listingForm" (ngSubmit)="onSubmit()">
+        <p>
+            <label for="listing_id">listing_id</label>
+            <input type="text" id="listing_id" name="listing_id" formControlName="listing_id" minlength="1" required/>
+            <span *ngIf="(listingForm.invalid) && (listingForm.dirty)">
+                    Please enter a valid listing_id, minimum 1 characters
+            </span>
+        </p>
+        <p>
+            <label for="listing_title">listing_title</label>
+            <input type="text" id="listing_title" name="listing_title" formControlName="listing_title" minlength="1" required/>
+            <span *ngIf="(listingForm.invalid) && (listingForm.dirty)">
+                    Please enter a valid listing_title, minimum 1 characters
+            </span>
+        </p>
+        <p>
+            <label for="description">description</label>
+            <input type="text" id="description" name="description" formControlName="description" minlength="1" required/>
+            <span *ngIf="(listingForm.invalid) && (listingForm.dirty)">
+                    Please enter a valid description, minimum 1 characters
+            </span>
+        </p>
+        <p>
+            <label for="street">street</label>
+            <input type="text" id="street" name="street" formControlName="street" minlength="1" required/>
+            <span *ngIf="(listingForm.invalid) && (listingForm.dirty)">
+                    Please enter a valid street, minimum 1 characters
+            </span>
+        </p>
+        <p>
+            <label for="city">city</label>
+            <input type="text" id="city" name="city" formControlName="city" minlength="1" required/>
+            <span *ngIf="(listingForm.invalid) && (listingForm.dirty)">
+                    Please enter a valid city, minimum 1 characters
+            </span>
+        </p>
+        <p>
+            <label for="postal_code">postal_code</label>
+            <input type="text" id="postal_code" name="postal_code" formControlName="postal_code" minlength="1" required/>
+            <span *ngIf="(listingForm.invalid) && (listingForm.dirty)">
+                    Please enter a valid postal_code, minimum 1 characters
+            </span>
+        </p>
+        <p>
+            <label for="price">price</label>
+            <input type="text" id="price" name="price" formControlName="price" minlength="1" required/>
+            <span *ngIf="(listingForm.invalid) && (listingForm.dirty)">
+                    Please enter a valid price, minimum 1 characters
+            </span>
+        </p>
+        <p>
+            <label for="email">email</label>
+            <input type="text" id="email" name="email" formControlName="email" minlength="1" required/>
+            <span *ngIf="(listingForm.invalid) && (listingForm.dirty)">
+                    Please enter a valid email, minimum 1 characters
+            </span>
+        </p>
+        <p>
+            <label for="username">username</label>
+            <input type="text" id="username" name="username" formControlName="username" minlength="1" required/>
+            <span *ngIf="(listingForm.invalid) && (listingForm.dirty)">
+                    Please enter a valid username, minimum 1 characters
+            </span>
+        </p>
+        <button type="submit"> SUBMIT </button>
+    </form>
+</ng-template>

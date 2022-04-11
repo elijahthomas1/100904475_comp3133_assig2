@@ -1,0 +1,65 @@
+<button (click)="goBack()">GO BACK</button>
+<h1>SEARCH FOR LISTINGS BY NAME</h1>
+<form [formGroup]="nameForm" (ngSubmit)="searchName()">
+    <p>
+        <label for="listing_title">listing_title</label>
+        <input type="text" id="listing_title" name="listing_title" formControlName="listing_title" minlength="1" required/>
+    </p>
+    <button type="submit"> SEARCH </button>
+</form>
+<ng-template ngIf="loadName">
+    <li *ngFor="let listing of listingList">
+            <h3>{{listing.listing_title}}</h3>
+            <p>Listing Id: {{listing.listing_id}}</p>
+            <p>Description: {{listing.description}}</p>
+            <p>Street: {{listing.street}}</p>
+            <p>City: {{listing.city}}</p>
+            <p>Postal Code: {{listing.postal_code}}</p>
+            <p>Price: {{listing.price}}</p>
+            <p>Email: {{listing.email}}</p>
+            <p>Username: {{listing.username}}</p>
+    </li>
+</ng-template>
+<h1>SEARCH FOR LISTINGS BY CITY</h1>
+<form [formGroup]="cityForm" (ngSubmit)="searchCity()">
+    <p>
+        <label for="city">city</label>
+        <input type="text" id="city" name="city" formControlName="city" minlength="1" required/>
+    </p>
+    <button type="submit"> SEARCH </button>
+</form>
+<ng-template ngIf="loadCity">
+    <li *ngFor="let listing of listingList">
+            <h3>{{listing.listing_title}}</h3>
+            <p>Listing Id: {{listing.listing_id}}</p>
+            <p>Description: {{listing.description}}</p>
+            <p>Street: {{listing.street}}</p>
+            <p>City: {{listing.city}}</p>
+            <p>Postal Code: {{listing.postal_code}}</p>
+            <p>Price: {{listing.price}}</p>
+            <p>Email: {{listing.email}}</p>
+            <p>Username: {{listing.username}}</p>
+    </li>
+</ng-template>
+<h1>SEARCH FOR LISTINGS BY POSTAL CODE</h1>
+<form [formGroup]="postalForm" (ngSubmit)="searchPostal()">
+    <p>
+        <label for="postal_code">postal_code</label>
+        <input type="text" id="postal_code" name="postal_code" formControlName="postal_code" minlength="1" required/>
+    </p>
+    <button type="submit"> SEARCH </button>
+</form>
+<ng-template ngIf="loadPostal">
+    <li *ngFor="let listing of listingList">
+            <h3>{{listing.listing_title}}</h3>
+            <p>Listing Id: {{listing.listing_id}}</p>
+            <p>Description: {{listing.description}}</p>
+            <p>Street: {{listing.street}}</p>
+            <p>City: {{listing.city}}</p>
+            <p>Postal Code: {{listing.postal_code}}</p>
+            <p>Price: {{listing.price}}</p>
+            <p>Email: {{listing.email}}</p>
+            <p>Username: {{listing.username}}</p>
+    </li>
+</ng-template>
+
